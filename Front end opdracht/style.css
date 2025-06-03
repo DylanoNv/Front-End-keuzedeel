@@ -3,6 +3,7 @@ body {
   margin: 0;
   background: #f9f9f9;
   color: #333;
+  
 }
 
 header {
@@ -81,6 +82,20 @@ button:active, nav a:active {
 nav a:hover {
   text-decoration: underline;
   color: #ccc;
+}
+
+nav a:hover {
+  color: #4a90e2;
+  text-decoration: underline;
+}
+
+section {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
 }
 
 

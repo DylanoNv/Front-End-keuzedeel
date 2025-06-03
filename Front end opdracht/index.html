@@ -5,9 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portfolio Dylano</title>
   <link rel="stylesheet" href="style.css" />
+<script>
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+</script>
+
 </head>
 <body>
-  <header>
+    <header>
     <nav>
       <h1>Dylano Nietveld Portfolio</h1>
       <ul>
@@ -20,7 +36,6 @@
       </ul>
     </nav>
   </header>
-
   <main>
     <section id="over">
       <h2>Over mij</h2>
@@ -73,7 +88,6 @@
       <p>GitHub: <a href="https://github.com/DylanoNv">https://github.com/DylanoNv</a></p>
     </section>
   </main>
-
   <footer>
     <p>&copy; 2025 Dylano</p>
   </footer>

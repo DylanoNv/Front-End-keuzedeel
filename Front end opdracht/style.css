@@ -68,3 +68,19 @@ footer {
   padding: 1em;
   margin-top: 2em;
 }
+
+button, nav a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:active, nav a:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #ccc;
+}
+
+
